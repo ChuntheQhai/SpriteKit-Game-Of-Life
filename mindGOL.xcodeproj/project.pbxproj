@@ -16,6 +16,14 @@
 		7B8F17C71BBE570B001B3047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F17C51BBE570B001B3047 /* LaunchScreen.storyboard */; };
 		7B8F17D21BBE570B001B3047 /* mindGOLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F17D11BBE570B001B3047 /* mindGOLTests.swift */; };
 		7B8F17DD1BBE570B001B3047 /* mindGOLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F17DC1BBE570B001B3047 /* mindGOLUITests.swift */; };
+		7B8F17EB1BBE580C001B3047 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8F17EA1BBE580C001B3047 /* assets */; settings = {ASSET_TAGS = (); }; };
+		7B8F17ED1BBE77E8001B3047 /* LightBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F17EC1BBE77E8001B3047 /* LightBlock.swift */; settings = {ASSET_TAGS = (); }; };
+		7B8F17EF1BBE7D73001B3047 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8F17EE1BBE7D73001B3047 /* Grid.swift */; settings = {ASSET_TAGS = (); }; };
+		7BC3A6491BBF83B600E031D0 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC3A6481BBF83B600E031D0 /* Board.swift */; settings = {ASSET_TAGS = (); }; };
+		7BC3A64B1BBF856E00E031D0 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC3A64A1BBF856E00E031D0 /* Button.swift */; settings = {ASSET_TAGS = (); }; };
+		7BC3A6511BBF8E8C00E031D0 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC3A6501BBF8E8C00E031D0 /* Label.swift */; settings = {ASSET_TAGS = (); }; };
+		7BC3A6541BBFADBF00E031D0 /* LabelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC3A6531BBFADBF00E031D0 /* LabelHelper.swift */; settings = {ASSET_TAGS = (); }; };
+		7BC3A6561BBFB53900E031D0 /* GridHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC3A6551BBFB53900E031D0 /* GridHelper.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		7B8F17D81BBE570B001B3047 /* mindGOLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mindGOLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8F17DC1BBE570B001B3047 /* mindGOLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindGOLUITests.swift; sourceTree = "<group>"; };
 		7B8F17DE1BBE570B001B3047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B8F17EA1BBE580C001B3047 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		7B8F17EC1BBE77E8001B3047 /* LightBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightBlock.swift; sourceTree = "<group>"; };
+		7B8F17EE1BBE7D73001B3047 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		7BC3A6481BBF83B600E031D0 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		7BC3A64A1BBF856E00E031D0 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		7BC3A6501BBF8E8C00E031D0 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		7BC3A6531BBFADBF00E031D0 /* LabelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelHelper.swift; sourceTree = "<group>"; };
+		7BC3A6551BBFB53900E031D0 /* GridHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +117,9 @@
 		7B8F17B71BBE570B001B3047 /* mindGOL */ = {
 			isa = PBXGroup;
 			children = (
+				7BC3A6521BBFADB000E031D0 /* Helper */,
+				7B8F17EA1BBE580C001B3047 /* assets */,
+				7BC3A6471BBF75F700E031D0 /* SpriteNodes */,
 				7B8F17B81BBE570B001B3047 /* AppDelegate.swift */,
 				7B8F17BA1BBE570B001B3047 /* GameScene.sks */,
 				7B8F17BC1BBE570B001B3047 /* GameScene.swift */,
@@ -129,6 +148,27 @@
 				7B8F17DE1BBE570B001B3047 /* Info.plist */,
 			);
 			path = mindGOLUITests;
+			sourceTree = "<group>";
+		};
+		7BC3A6471BBF75F700E031D0 /* SpriteNodes */ = {
+			isa = PBXGroup;
+			children = (
+				7B8F17EC1BBE77E8001B3047 /* LightBlock.swift */,
+				7B8F17EE1BBE7D73001B3047 /* Grid.swift */,
+				7BC3A6481BBF83B600E031D0 /* Board.swift */,
+				7BC3A64A1BBF856E00E031D0 /* Button.swift */,
+				7BC3A6501BBF8E8C00E031D0 /* Label.swift */,
+			);
+			name = SpriteNodes;
+			sourceTree = "<group>";
+		};
+		7BC3A6521BBFADB000E031D0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7BC3A6531BBFADBF00E031D0 /* LabelHelper.swift */,
+				7BC3A6551BBFB53900E031D0 /* GridHelper.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8F17EB1BBE580C001B3047 /* assets in Resources */,
 				7B8F17BB1BBE570B001B3047 /* GameScene.sks in Resources */,
 				7B8F17C71BBE570B001B3047 /* LaunchScreen.storyboard in Resources */,
 				7B8F17C41BBE570B001B3047 /* Assets.xcassets in Resources */,
@@ -264,7 +305,14 @@
 			files = (
 				7B8F17BD1BBE570B001B3047 /* GameScene.swift in Sources */,
 				7B8F17BF1BBE570B001B3047 /* GameViewController.swift in Sources */,
+				7BC3A6491BBF83B600E031D0 /* Board.swift in Sources */,
+				7B8F17ED1BBE77E8001B3047 /* LightBlock.swift in Sources */,
+				7BC3A6541BBFADBF00E031D0 /* LabelHelper.swift in Sources */,
+				7BC3A6561BBFB53900E031D0 /* GridHelper.swift in Sources */,
+				7B8F17EF1BBE7D73001B3047 /* Grid.swift in Sources */,
+				7BC3A6511BBF8E8C00E031D0 /* Label.swift in Sources */,
 				7B8F17B91BBE570B001B3047 /* AppDelegate.swift in Sources */,
+				7BC3A64B1BBF856E00E031D0 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mindGOL/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChunQhai.mindGOL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = mindGOL/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChunQhai.mindGOL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -491,6 +541,7 @@
 				7B8F17E31BBE570B001B3047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B8F17E41BBE570B001B3047 /* Build configuration list for PBXNativeTarget "mindGOLTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +550,7 @@
 				7B8F17E61BBE570B001B3047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B8F17E71BBE570B001B3047 /* Build configuration list for PBXNativeTarget "mindGOLUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +559,7 @@
 				7B8F17E91BBE570B001B3047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

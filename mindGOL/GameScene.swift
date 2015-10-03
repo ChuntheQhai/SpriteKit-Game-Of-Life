@@ -1,6 +1,6 @@
 //
 //  GameScene.swift
-//  mindGOL
+//  SpriteKit-Game-Of-Life
 //
 //  Created by Khoo Chun Qhai on 10/2/15.
 //  Copyright (c) 2015 ChunQhai. All rights reserved.
@@ -8,35 +8,89 @@
 
 import SpriteKit
 
+let nameNextBtn = "nextBtn"
+let nameExitBtn = "exitBtn"
+
 class GameScene: SKScene {
+    
+    var population = 0
+    var generation = 0
+ 
+    
+    var bg = SKSpriteNode()
+
+    
+    var labelPopulation: Label!
+    var labelGeneration: Label!
+    var nextBtn: Button!
+    var exitBtn: Button!
+    var board: Board!
+    var grid: Grid!
+    
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 45;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
-        self.addChild(myLabel)
+        userInteractionEnabled = true
+        setUpUI()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
+    func setUpUI() {
+        // Setup Background
+        let bgTexture = SKTexture(imageNamed: "assets/background.png")
+        bg = SKSpriteNode(texture: bgTexture)
+        bg.position = CGPoint(x: CGRectGetMidX(self.frame),y: CGRectGetMidY(self.frame))
+        bg.size.height = self.frame.height
+        bg.zPosition = -1
+        self.addChild(bg)
         
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
+        // Create Grid
+        grid = Grid(imageNamed: "assets/grid.png",
+                    position: CGPoint(x: (CGRectGetMidX(self.frame) / 2) * 0.33, y: (CGRectGetMidY(self.frame) / 2) * 0.7),
+                    gridSize: CGSizeMake(( self.frame.size.height / 2.0 ) * 1.48 , (self.frame.size.width / 2) * 0.95),
+                    textureSize: CGSizeMake(1200,1200),
+                    anchorPoint: CGPoint(x: 0,y: 0))
+        self.addChild(grid)
+        GridHelper.addGrid(grid)
+        
+        // Create board
+        board = Board(imageNamed: "assets/board.png",
+            position: CGPoint(x: CGRectGetMidX(self.frame) * 1.6, y: CGRectGetMidY(self.frame) * 0.73))
+        self.addChild(board)
+        
+        // Create start button
+        nextBtn = Button(name: nameNextBtn,
+            size: CGSizeMake(250,100),
+            position: CGPoint(x: CGRectGetMidX(self.frame) * 1.6, y: CGRectGetMidY(self.frame) * 1.5),
+            imageNamed: "assets/next.png")
+        self.addChild(nextBtn)
+        
+        // Create pause button
+        exitBtn = Button(name: nameExitBtn,
+            size: CGSizeMake(250,100),
+            position: CGPoint(x: CGRectGetMidX(self.frame) * 1.6, y: CGRectGetMidY(self.frame) * 1.25),
+            imageNamed: "assets/exit.png")
+        self.addChild(exitBtn)
+        
+        // Create label for population
+        labelPopulation = Label(fontName: "Arial Black-Bold",
+                                text: "0",
+                                size: 50,
+                                position: CGPoint(x: CGRectGetMidX(self.frame) * 1.6, y: CGRectGetMidY(self.frame) * 0.75),
+                                zPosition: 10,
+                                groupName: "lblPopulation")
+        self.addChild(labelPopulation)
+        LabelHelper.addLabelNode(labelPopulation)
+        
+        
+        // Create label for generation
+        labelGeneration = Label(fontName: "Arial Black-Bold",
+                                text: "0",
+                                size: 50,
+                                position: CGPoint(x: CGRectGetMidX(self.frame) * 1.6, y: CGRectGetMidY(self.frame) * 0.41),
+                                zPosition: 10,
+                                groupName: "lblGeneration")
+        LabelHelper.addLabelNode(labelGeneration)
+
+        self.addChild(labelGeneration)
     }
    
     override func update(currentTime: CFTimeInterval) {

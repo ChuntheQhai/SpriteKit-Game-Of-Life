@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  mindGOL
+//  SpriteKit-Game-Of-Life
 //
 //  Created by Khoo Chun Qhai on 10/2/15.
 //  Copyright © 2015 ChunQhai. All rights reserved.

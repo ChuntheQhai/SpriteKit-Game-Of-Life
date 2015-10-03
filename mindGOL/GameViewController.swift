@@ -1,6 +1,6 @@
 //
 //  GameViewController.swift
-//  mindGOL
+//  SpriteKit-Game-Of-Life
 //
 //  Created by Khoo Chun Qhai on 10/2/15.
 //  Copyright (c) 2015 ChunQhai. All rights reserved.
@@ -31,15 +31,11 @@ class GameViewController: UIViewController {
     }
 
     override func shouldAutorotate() -> Bool {
-        return true
+        return false
     }
 
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
-        } else {
-            return .All
-        }
+        return UIInterfaceOrientationMask.Portrait
     }
 
     override func didReceiveMemoryWarning() {
