@@ -119,7 +119,7 @@
 			children = (
 				7BC3A6521BBFADB000E031D0 /* Helper */,
 				7B8F17EA1BBE580C001B3047 /* assets */,
-				7BC3A6471BBF75F700E031D0 /* SpriteNodes */,
+				7BC3A6471BBF75F700E031D0 /* SKNodes */,
 				7B8F17B81BBE570B001B3047 /* AppDelegate.swift */,
 				7B8F17BA1BBE570B001B3047 /* GameScene.sks */,
 				7B8F17BC1BBE570B001B3047 /* GameScene.swift */,
@@ -150,7 +150,7 @@
 			path = mindGOLUITests;
 			sourceTree = "<group>";
 		};
-		7BC3A6471BBF75F700E031D0 /* SpriteNodes */ = {
+		7BC3A6471BBF75F700E031D0 /* SKNodes */ = {
 			isa = PBXGroup;
 			children = (
 				7B8F17EC1BBE77E8001B3047 /* LightBlock.swift */,
@@ -159,7 +159,7 @@
 				7BC3A64A1BBF856E00E031D0 /* Button.swift */,
 				7BC3A6501BBF8E8C00E031D0 /* Label.swift */,
 			);
-			name = SpriteNodes;
+			name = SKNodes;
 			sourceTree = "<group>";
 		};
 		7BC3A6521BBFADB000E031D0 /* Helper */ = {
