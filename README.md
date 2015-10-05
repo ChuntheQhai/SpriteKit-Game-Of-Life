@@ -1,4 +1,4 @@
--- Getting Started
+== Getting Started
 
 1) You must have minimum Xcode 6 in order to run the project.
 
